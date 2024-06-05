@@ -36,3 +36,9 @@ class Maze:
     def animate(self):
         self.canvas.redraw()
         time.sleep(0.02)
+
+    def break_entrance_and_exit(self):
+        self.cells[0][0].has_bottom_wall = False
+        self.cells[0][0].draw()
+        self.cells[self.num_cols-1][self.num_rows-1].has_top_wall = False
+        self.cells[self.num_cols-1][self.num_rows-1].draw()
