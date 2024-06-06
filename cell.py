@@ -31,7 +31,7 @@ class Cell:
         if self.has_right_wall:
             self.canvas.draw_line(Line(top_right, bottom_right))
         else:
-            self.cavans.draw_line(Line(top_right, bottom_right), 'white')
+            self.canvas.draw_line(Line(top_right, bottom_right), 'white')
         if self.has_bottom_wall:
             self.canvas.draw_line(Line(bottom_right, bottom_left))
         else:
