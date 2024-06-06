@@ -14,8 +14,9 @@ def main():
     win = Window(width, height)
     maze = Maze(margin, num_rows, num_cols, win, cell_width)
     maze.create_cells()
-    maze.draw_cells()
     maze.break_entrance_and_exit()
+    maze.test_draw()
+    print(maze.cells[0][0].has_top_wall)
     win.wait_for_close()
 
 

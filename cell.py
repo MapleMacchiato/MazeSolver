@@ -11,13 +11,18 @@ class Cell:
         self.width = width
         self.center = Point(point.x, point.y)
         self.canvas = canvas
+        self.visited = False
 
     def draw(self):
         l = self.width / 2
-        top_left = Point(self.center.x - l, self.center.y + l)
-        top_right = Point(self.center.x + l, self.center.y + l)
-        bottom_left = Point(self.center.x - l, self.center.y - l)
-        bottom_right = Point(self.center.x + l, self.center.y - l)
+        # top_left = Point(self.center.x - l, self.center.y + l)
+        # top_right = Point(self.center.x + l, self.center.y + l)
+        # bottom_left = Point(self.center.x - l, self.center.y - l)
+        # bottom_right = Point(self.center.x + l, self.center.y - l)
+        bottom_left = Point(self.center.x - l, self.center.y + l)
+        bottom_right = Point(self.center.x + l, self.center.y + l)
+        top_left = Point(self.center.x - l, self.center.y - l)
+        top_right = Point(self.center.x + l, self.center.y - l)
 
         if self.has_top_wall:
             self.canvas.draw_line(Line(top_left, top_right))
