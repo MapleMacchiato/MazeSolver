@@ -14,6 +14,11 @@ class Maze:
         self.cells = []
         self.cell_width = cell_width
 
+    def start_maze(self):
+        self.create_cells()
+        self.break_entrance_and_exit()
+        self.break_walls(0, 0)
+
     def create_cells(self):
         start_point = Point(self.margin + self.cell_width /
                             2, self.margin + self.cell_width/2)

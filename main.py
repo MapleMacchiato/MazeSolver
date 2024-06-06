@@ -13,9 +13,7 @@ def main():
     num_cols = (width - 2 * margin) // cell_width
     win = Window(width, height)
     maze = Maze(margin, num_rows, num_cols, win, cell_width)
-    maze.create_cells()
-    maze.break_entrance_and_exit()
-    maze.break_walls(0, 0)
+    maze.start_maze()
     win.wait_for_close()
 
 
